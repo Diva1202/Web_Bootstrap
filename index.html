@@ -7,49 +7,77 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     
-    <title>Portofolio - Diva Heni Cintia</title>
+    <title>Profil - Diva Heni Cintia</title>
     
     <style>
       body {
-        background: linear-gradient(to bottom, #ffffff, #f8f9fa);
+        background: #f8f9fa;
         scroll-behavior: smooth;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       }
-      /* Slider Styling */
+
+      header {
+        padding-top: 56px; 
+      }
+
       .carousel-item {
-        height: 80vh; /* Tinggi slide 80% layar */
-        min-height: 400px;
+        height: 65vh; 
+        min-height: 350px;
         background: no-repeat center center scroll;
         background-size: cover;
       }
+
       .carousel-caption {
-        background: rgba(0, 0, 0, 0.5); /* Background hitam transparan agar teks terbaca */
-        padding: 20px;
+        background: rgba(0, 0, 0, 0.6); 
+        padding: 25px;
         border-radius: 15px;
-        bottom: 30%;
+        bottom: 30%; 
       }
-      .profile-img {
+
+      section {
+        padding: 70px 0;
+      }
+
+      .about-img {
         width: 150px;
         height: 150px;
         object-fit: cover;
-        border: 5px solid rgba(255, 255, 255, 0.3);
+        border: 5px solid white;
       }
-      .card {
+
+      .skill-card {
         border: none;
-        transition: transform 0.3s;
+        background: white;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        transition: 0.3s;
       }
-      .card:hover {
+
+      .skill-card:hover {
         transform: translateY(-5px);
       }
-      .card-img-top {
-        height: 200px;
-        object-fit: cover;
+
+      .map-container {
+        position: relative;
+        padding-bottom: 56.25%; /* Ratio 16:9 */
+        height: 0;
+        overflow: hidden;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
       }
-      section {
-        padding: 80px 0;
+
+      .map-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
       }
+
       .btn-instagram {
-        background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+        background: linear-gradient(45deg, #f09433, #dc2743, #bc1888);
         color: white !important;
         border: none;
       }
@@ -62,6 +90,13 @@
         background-color: #25d366;
         border: none;
       }
+
+      @media (max-width: 576px) {
+        .carousel-item { height: 55vh; }
+        .carousel-caption h2 { font-size: 1.8rem; }
+        .carousel-caption p { font-size: 0.9rem; }
+        .about-img { width: 120px; height: 120px; }
+      }
     </style>
   </head>
   <body>
@@ -69,15 +104,14 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
       <div class="container">
         <a class="navbar-brand font-weight-bold" href="#">Diva Heni Cintia</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav ml-auto text-uppercase small">
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <div class="navbar-nav ml-auto text-uppercase small font-weight-bold">
             <a class="nav-link" href="#">Home</a>
             <a class="nav-link" href="#About">Profil</a>
             <a class="nav-link" href="#Keahlian">Keahlian</a>
-            <a class="nav-link" href="#Portofolio">Proyek</a>
             <a class="nav-link" href="#Contact">Kontak</a>
           </div>
         </div>
@@ -85,156 +119,117 @@
     </nav>
 
     <header>
-      <div id="carouselExampleIndicators" class="carousel slide shadow-lg" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner" role="listbox">
-          
-          <div class="carousel-item active" style="background-image: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1600')">
-            <div class="carousel-caption text-center">
-              <img src="https://via.placeholder.com/150" class="rounded-circle profile-img mb-3" alt="Foto Diva">
-              <h2 class="display-4 font-weight-bold">DIVA HENI CINTIA</h2>
-              <p class="lead text-uppercase">Web Developer | Graphic Designer</p>
-              <a href="#Portofolio" class="btn btn-primary font-weight-bold">LIHAT KARYA</a>
+      <div id="mainSlider" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" style="background-image: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200')">
+            <div class="carousel-caption">
+              <h2 class="font-weight-bold text-uppercase">DIVA HENI CINTIA</h2>
+              <p class="lead text-uppercase">Informatics Student | Web Developer</p>
+              <a href="#Contact" class="btn btn-primary btn-sm px-4 font-weight-bold shadow-sm mt-2">HUBUNGI SAYA</a>
             </div>
           </div>
-
-          <div class="carousel-item" style="background-image: url('https://images.unsplash.com/photo-1558655146-d09347e92766?w=1600')">
-            <div class="carousel-caption text-center">
-              <h2 class="display-4 font-weight-bold text-uppercase">Graphic Design</h2>
-              <p class="lead">Ahli dalam desain vektor dan branding menggunakan CorelDRAW.</p>
-              <a href="#Keahlian" class="btn btn-info font-weight-bold">PELAJARI SKILL</a>
+          <div class="carousel-item" style="background-image: url('https://images.unsplash.com/photo-1558655146-d09347e92766?w=1200')">
+            <div class="carousel-caption">
+              <h2 class="font-weight-bold text-uppercase">CREATIVE DESIGN</h2>
+              <p class="lead">CorelDRAW Designer & System Logic Planner</p>
+              <a href="#Keahlian" class="btn btn-info btn-sm px-4 font-weight-bold shadow-sm mt-2">LIHAT SKILL</a>
             </div>
           </div>
-
-          <div class="carousel-item" style="background-image: url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1600')">
-            <div class="carousel-caption text-center">
-              <h2 class="display-4 font-weight-bold text-uppercase">System Logic</h2>
-              <p class="lead">Perancangan flowchart dan implementasi sistem yang rapi.</p>
-              <a href="#Contact" class="btn btn-success font-weight-bold">HUBUNGI SAYA</a>
-            </div>
-          </div>
-
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <a class="carousel-control-prev" href="#mainSlider" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
         </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <a class="carousel-control-next" href="#mainSlider" role="button" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
         </a>
       </div>
     </header>
 
     <section id="About" class="bg-white">
       <div class="container text-center">
-        <h2 class="font-weight-bold">Tentang Saya</h2>
-        <div class="row justify-content-center mt-4">
+        <h2 class="font-weight-bold">TENTANG SAYA</h2>
+        <hr style="width: 60px; border-top: 3px solid #007bff;" class="mb-4">
+        <div class="row justify-content-center mb-4">
+            <div class="col-auto">
+                <img src="1.png" class="rounded-circle about-img shadow" alt="Foto Diva Heni Cintia">
+            </div>
+        </div>
+        <div class="row justify-content-center">
           <div class="col-md-8 text-muted">
-            <p>Halo! Saya adalah mahasiswa Informatika yang aktif mengembangkan berbagai solusi digital. Saya memiliki minat besar dalam desain antarmuka, perancangan logika sistem melalui flowchart, dan pengembangan website yang interaktif.</p>
+            <p>Halo! Saya adalah mahasiswa Teknik Informatika yang memiliki antusiasme tinggi dalam dunia digital. Saya aktif mempelajari pengembangan website, desain grafis menggunakan CorelDRAW, serta perancangan logika sistem yang efisien.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="Keahlian" class="bg-light text-center">
-        <div class="container">
-          <h2 class="font-weight-bold mb-5 text-uppercase">Keahlian Utama</h2>
-          <div class="row">
-            <div class="col-md-4 mb-4">
-              <div class="p-4 bg-white shadow-sm rounded-lg h-100">
-                <i class="fas fa-code fa-3x text-primary mb-3"></i>
-                <h5 class="font-weight-bold">Web Development</h5>
-                <p class="small text-muted">Membangun struktur website responsif menggunakan HTML5, CSS3, dan framework Bootstrap.</p>
-              </div>
-            </div>
-            <div class="col-md-4 mb-4">
-              <div class="p-4 bg-white shadow-sm rounded-lg h-100">
-                <i class="fas fa-sitemap fa-3x text-primary mb-3"></i>
-                <h5 class="font-weight-bold">System Logic</h5>
-                <p class="small text-muted">Merancang alur logika program yang efisien melalui Flowchart dan Flowgorithm.</p>
-              </div>
-            </div>
-            <div class="col-md-4 mb-4">
-              <div class="p-4 bg-white shadow-sm rounded-lg h-100">
-                <i class="fas fa-palette fa-3x text-primary mb-3"></i>
-                <h5 class="font-weight-bold">Graphic Design</h5>
-                <p class="small text-muted">Membuat aset visual, desain vektor, dan logo menggunakan CorelDRAW.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-    </section>
-
-    <section id="Portofolio" class="bg-white">
-      <div class="container py-3 text-center">
-        <h2 class="font-weight-bold mb-5 text-uppercase">Proyek Terbaru</h2>
+    <section id="Keahlian" class="bg-light">
+      <div class="container text-center">
+        <h2 class="font-weight-bold mb-5">KEAHLIAN UTAMA</h2>
         <div class="row">
           <div class="col-md-4 mb-4">
-            <div class="card shadow-sm h-100 p-2">
-              <img src="https://www.coreldraw.com/static/cdgs/product_content/cdgs/essentials/2024/cds/tools-photo-paint.jpg" class="card-img-top rounded" alt="Desain Corel">
-              <div class="card-body">
-                <h6 class="font-weight-bold">CorelDRAW Design</h6>
-                <p class="text-muted small">Koleksi desain vektor dan ilustrasi kreatif.</p>
-                <span class="badge badge-primary">Vektor</span>
-              </div>
+            <div class="skill-card">
+              <i class="fas fa-code fa-3x text-primary mb-3"></i>
+              <h5 class="font-weight-bold">Web Development</h5>
+              <p class="small text-muted mb-0">HTML, CSS, JavaScript, & Bootstrap.</p>
             </div>
           </div>
           <div class="col-md-4 mb-4">
-            <div class="card shadow-sm h-100 p-2">
-              <img src="https://png.pngtree.com/thumb_back/fw800/background/20231005/pngtree-illustration-of-a-web-developer-programming-on-laptop-screen-with-computer-image_13531205.png" class="card-img-top rounded" alt="Proyek HTML">
-              <div class="card-body">
-                <h6 class="font-weight-bold">HTML & CSS Website</h6>
-                <p class="text-muted small">Landing page responsif dengan Bootstrap.</p>
-                <span class="badge badge-info">Frontend</span>
-              </div>
+            <div class="skill-card">
+              <i class="fas fa-palette fa-3x text-primary mb-3"></i>
+              <h5 class="font-weight-bold">CorelDRAW</h5>
+              <p class="small text-muted mb-0">Vektor, Logo, & Ilustrasi Grafis.</p>
             </div>
           </div>
           <div class="col-md-4 mb-4">
-            <div class="card shadow-sm h-100 p-2">
-              <img src="https://slidebazaar.com/wp-content/uploads/2022/09/Flowchart-Template-Dark.jpg" class="card-img-top rounded" alt="Flowchart">
-              <div class="card-body">
-                <h6 class="font-weight-bold">Logic Flowchart</h6>
-                <p class="text-muted small">Perancangan alur sistem manajemen aplikasi.</p>
-                <span class="badge badge-dark">Logic</span>
-              </div>
+            <div class="skill-card">
+              <i class="fas fa-sitemap fa-3x text-primary mb-3"></i>
+              <h5 class="font-weight-bold">System Logic</h5>
+              <p class="small text-muted mb-0">Flowchart & Alur Logika Program.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="Contact" class="bg-light">
-      <div class="container py-3 text-center">
-        <h2 class="font-weight-bold mb-5 text-uppercase">Hubungi Saya</h2>
+    <section id="Location" class="bg-white">
+      <div class="container text-center">
+        <h2 class="font-weight-bold mb-5 text-uppercase">Lokasi Kampus</h2>
         <div class="row justify-content-center">
-          <div class="col-lg-5">
-            <div class="p-4 border-0 rounded-lg bg-white shadow-sm">
-                <a href="https://wa.me/6283833947860?text=Halo%20Diva,%20saya%20melihat%20portofolio%20Anda" 
-                   target="_blank" 
-                   class="btn btn-success btn-block font-weight-bold shadow-sm mb-3 py-2 border-0">
-                   <i class="fab fa-whatsapp mr-2"></i> WHATSAPP
-                </a>
-                <a href="https://www.instagram.com/dvctya_/" 
-                   target="_blank" 
-                   class="btn btn-instagram btn-block font-weight-bold shadow-sm mb-3 py-2 border-0 text-white">
-                   <i class="fab fa-instagram mr-2"></i> INSTAGRAM
-                </a>
-                <a href="mailto:divacintia1@gmail.com"
-                   class="btn btn-gmail btn-block font-weight-bold shadow-sm mb-3 py-2 border-0 text-white">
-                   <i class="fas fa-envelope mr-2"></i> GMAIL
-                </a>
-                <p class="text-muted mt-4 small">Silahkan klik salah satu tombol di atas untuk menghubungi saya.</p>
+          <div class="col-lg-10">
+            <div class="map-container">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.168532454641!2d109.66215077421111!3d-6.870425567223363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7025d80e03b5e9%3A0x3be4e1ede9ce665c!2sSchool%20of%20Management%20Information%20and%20Computer%20Widya%20Pratama%20Pekalongan!5e0!3m2!1sen!2sid!4v1711200000000!5m2!1sen!2sid" 
+                allowfullscreen="" 
+                loading="lazy">
+              </iframe>
             </div>
+            <p class="mt-3 text-muted small">Jl. Patriot No.25, Kec. Pekalongan Utara, Kota Pekalongan</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="Contact" class="bg-light text-center">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-5 p-4 shadow rounded-lg border bg-white">
+            <h4 class="font-weight-bold mb-4">HUBUNGI SAYA</h4>
+            <a href="https://wa.me/6283833947860" target="_blank" class="btn btn-success btn-block py-2 font-weight-bold mb-3 shadow-sm">
+              <i class="fab fa-whatsapp mr-2"></i> WHATSAPP
+            </a>
+            <a href="https://www.instagram.com/dvctya_/" target="_blank" class="btn btn-instagram btn-block py-2 font-weight-bold mb-3 shadow-sm">
+              <i class="fab fa-instagram mr-2"></i> INSTAGRAM
+            </a>
+            <a href="mailto:divacintia1@gmail.com" class="btn btn-gmail btn-block py-2 font-weight-bold shadow-sm">
+              <i class="fas fa-envelope mr-2"></i> GMAIL
+            </a>
           </div>
         </div>
       </div>
     </section>
 
     <footer class="bg-dark text-white py-4 text-center">
-      <p class="mb-0 small font-weight-bold">© 2026 Diva Heni Cintia. All Rights Reserved.</p>
+      <small class="font-weight-bold">© 2026 DIVA HENI CINTIA | TEKNIK INFORMATIKA</small>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
