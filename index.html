@@ -15,14 +15,22 @@
         scroll-behavior: smooth;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       }
-      .jumbotron {
-        background: linear-gradient(135deg, #007bff, #00c6ff);
-        padding-top: 120px;
-        margin-bottom: 0;
+      /* Slider Styling */
+      .carousel-item {
+        height: 80vh; /* Tinggi slide 80% layar */
+        min-height: 400px;
+        background: no-repeat center center scroll;
+        background-size: cover;
+      }
+      .carousel-caption {
+        background: rgba(0, 0, 0, 0.5); /* Background hitam transparan agar teks terbaca */
+        padding: 20px;
+        border-radius: 15px;
+        bottom: 30%;
       }
       .profile-img {
-        width: 180px;
-        height: 180px;
+        width: 150px;
+        height: 150px;
         object-fit: cover;
         border: 5px solid rgba(255, 255, 255, 0.3);
       }
@@ -40,17 +48,19 @@
       section {
         padding: 80px 0;
       }
-      /* Warna Khusus Tombol */
       .btn-instagram {
         background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
         color: white !important;
+        border: none;
       }
       .btn-gmail {
         background-color: #db4437;
         color: white !important;
+        border: none;
       }
       .btn-success {
         background-color: #25d366;
+        border: none;
       }
     </style>
   </head>
@@ -74,15 +84,49 @@
       </div>
     </nav>
 
-    <div class="jumbotron text-white">
-      <div class="container text-center py-5">
-        <img src="[ISI_LINK_FOTO_KAMU_DISINI]" class="rounded-circle profile-img shadow-lg mb-4" alt="Diva Heni Cintia"> 
-        <h1 class="display-4 font-weight-bold">DIVA HENI CINTIA</h1>
-        <p class="lead text-uppercase">Web Developer | UI/UX Designer | Graphic Designer</p>
-        <hr class="my-4 bg-light" style="width: 100px;">
-        <a class="btn btn-light btn-sm px-4 font-weight-bold text-primary shadow" href="#Portofolio" role="button">LIHAT KARYA</a>
+    <header>
+      <div id="carouselExampleIndicators" class="carousel slide shadow-lg" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+          
+          <div class="carousel-item active" style="background-image: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1600')">
+            <div class="carousel-caption text-center">
+              <img src="https://via.placeholder.com/150" class="rounded-circle profile-img mb-3" alt="Foto Diva">
+              <h2 class="display-4 font-weight-bold">DIVA HENI CINTIA</h2>
+              <p class="lead text-uppercase">Web Developer | Graphic Designer</p>
+              <a href="#Portofolio" class="btn btn-primary font-weight-bold">LIHAT KARYA</a>
+            </div>
+          </div>
+
+          <div class="carousel-item" style="background-image: url('https://images.unsplash.com/photo-1558655146-d09347e92766?w=1600')">
+            <div class="carousel-caption text-center">
+              <h2 class="display-4 font-weight-bold text-uppercase">Graphic Design</h2>
+              <p class="lead">Ahli dalam desain vektor dan branding menggunakan CorelDRAW.</p>
+              <a href="#Keahlian" class="btn btn-info font-weight-bold">PELAJARI SKILL</a>
+            </div>
+          </div>
+
+          <div class="carousel-item" style="background-image: url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1600')">
+            <div class="carousel-caption text-center">
+              <h2 class="display-4 font-weight-bold text-uppercase">System Logic</h2>
+              <p class="lead">Perancangan flowchart dan implementasi sistem yang rapi.</p>
+              <a href="#Contact" class="btn btn-success font-weight-bold">HUBUNGI SAYA</a>
+            </div>
+          </div>
+
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </a>
       </div>
-    </div>
+    </header>
 
     <section id="About" class="bg-white">
       <div class="container text-center">
@@ -125,12 +169,11 @@
     </section>
 
     <section id="Portofolio" class="bg-white">
-      <div class="container py-3">
-        <h2 class="font-weight-bold text-center mb-5 text-uppercase">Proyek Terbaru</h2>
+      <div class="container py-3 text-center">
+        <h2 class="font-weight-bold mb-5 text-uppercase">Proyek Terbaru</h2>
         <div class="row">
-
           <div class="col-md-4 mb-4">
-            <div class="card shadow-sm h-100 text-center p-2">
+            <div class="card shadow-sm h-100 p-2">
               <img src="https://www.coreldraw.com/static/cdgs/product_content/cdgs/essentials/2024/cds/tools-photo-paint.jpg" class="card-img-top rounded" alt="Desain Corel">
               <div class="card-body">
                 <h6 class="font-weight-bold">CorelDRAW Design</h6>
@@ -139,9 +182,8 @@
               </div>
             </div>
           </div>
-
           <div class="col-md-4 mb-4">
-            <div class="card shadow-sm h-100 text-center p-2">
+            <div class="card shadow-sm h-100 p-2">
               <img src="https://png.pngtree.com/thumb_back/fw800/background/20231005/pngtree-illustration-of-a-web-developer-programming-on-laptop-screen-with-computer-image_13531205.png" class="card-img-top rounded" alt="Proyek HTML">
               <div class="card-body">
                 <h6 class="font-weight-bold">HTML & CSS Website</h6>
@@ -150,9 +192,8 @@
               </div>
             </div>
           </div>
-
           <div class="col-md-4 mb-4">
-            <div class="card shadow-sm h-100 text-center p-2">
+            <div class="card shadow-sm h-100 p-2">
               <img src="https://slidebazaar.com/wp-content/uploads/2022/09/Flowchart-Template-Dark.jpg" class="card-img-top rounded" alt="Flowchart">
               <div class="card-body">
                 <h6 class="font-weight-bold">Logic Flowchart</h6>
@@ -161,7 +202,6 @@
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </section>
@@ -172,24 +212,20 @@
         <div class="row justify-content-center">
           <div class="col-lg-5">
             <div class="p-4 border-0 rounded-lg bg-white shadow-sm">
-                
                 <a href="https://wa.me/6283833947860?text=Halo%20Diva,%20saya%20melihat%20portofolio%20Anda" 
                    target="_blank" 
                    class="btn btn-success btn-block font-weight-bold shadow-sm mb-3 py-2 border-0">
                    <i class="fab fa-whatsapp mr-2"></i> WHATSAPP
                 </a>
-
                 <a href="https://www.instagram.com/dvctya_/" 
                    target="_blank" 
                    class="btn btn-instagram btn-block font-weight-bold shadow-sm mb-3 py-2 border-0 text-white">
                    <i class="fab fa-instagram mr-2"></i> INSTAGRAM
                 </a>
-
                 <a href="mailto:divacintia1@gmail.com"
                    class="btn btn-gmail btn-block font-weight-bold shadow-sm mb-3 py-2 border-0 text-white">
                    <i class="fas fa-envelope mr-2"></i> GMAIL
                 </a>
-
                 <p class="text-muted mt-4 small">Silahkan klik salah satu tombol di atas untuk menghubungi saya.</p>
             </div>
           </div>
