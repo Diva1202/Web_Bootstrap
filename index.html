@@ -8,98 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     
     <title>Profil - Diva Heni Cintia</title>
-    
-    <style>
-      body {
-        background: #f8f9fa;
-        scroll-behavior: smooth;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      }
-
-      header {
-        padding-top: 56px; 
-      }
-
-      .carousel-item {
-        height: 65vh; 
-        min-height: 350px;
-        background: no-repeat center center scroll;
-        background-size: cover;
-      }
-
-      .carousel-caption {
-        background: rgba(0, 0, 0, 0.6); 
-        padding: 25px;
-        border-radius: 15px;
-        bottom: 30%; 
-      }
-
-      section {
-        padding: 70px 0;
-      }
-
-      .about-img {
-        width: 150px;
-        height: 150px;
-        object-fit: cover;
-        border: 5px solid white;
-      }
-
-      .skill-card {
-        border: none;
-        background: white;
-        padding: 30px;
-        border-radius: 15px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        transition: 0.3s;
-      }
-
-      .skill-card:hover {
-        transform: translateY(-5px);
-      }
-
-      .map-container {
-        position: relative;
-        padding-bottom: 56.25%; /* Ratio 16:9 */
-        height: 0;
-        overflow: hidden;
-        border-radius: 15px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-      }
-
-      .map-container iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border: 0;
-      }
-
-      .btn-instagram {
-        background: linear-gradient(45deg, #f09433, #dc2743, #bc1888);
-        color: white !important;
-        border: none;
-      }
-      .btn-gmail {
-        background-color: #db4437;
-        color: white !important;
-        border: none;
-      }
-      .btn-success {
-        background-color: #25d366;
-        border: none;
-      }
-
-      @media (max-width: 576px) {
-        .carousel-item { height: 55vh; }
-        .carousel-caption h2 { font-size: 1.8rem; }
-        .carousel-caption p { font-size: 0.9rem; }
-        .about-img { width: 120px; height: 120px; }
-      }
-    </style>
   </head>
-  <body>
+  <body style="background: #f8f9fa; scroll-behavior: smooth; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
       <div class="container">
@@ -118,18 +28,18 @@
       </div>
     </nav>
 
-    <header>
+    <header style="padding-top: 56px;">
       <div id="mainSlider" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
-          <div class="carousel-item active" style="background-image: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200')">
-            <div class="carousel-caption">
+          <div class="carousel-item active" style="height: 65vh; min-height: 350px; background: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200') no-repeat center center scroll; background-size: cover;">
+            <div class="carousel-caption" style="background: rgba(0, 0, 0, 0.6); padding: 25px; border-radius: 15px; bottom: 30%;">
               <h2 class="font-weight-bold text-uppercase">DIVA HENI CINTIA</h2>
               <p class="lead text-uppercase">Informatics Student | Web Developer</p>
               <a href="#Contact" class="btn btn-primary btn-sm px-4 font-weight-bold shadow-sm mt-2">HUBUNGI SAYA</a>
             </div>
           </div>
-          <div class="carousel-item" style="background-image: url('https://images.unsplash.com/photo-1558655146-d09347e92766?w=1200')">
-            <div class="carousel-caption">
+          <div class="carousel-item" style="height: 65vh; min-height: 350px; background: url('https://images.unsplash.com/photo-1558655146-d09347e92766?w=1200') no-repeat center center scroll; background-size: cover;">
+            <div class="carousel-caption" style="background: rgba(0, 0, 0, 0.6); padding: 25px; border-radius: 15px; bottom: 30%;">
               <h2 class="font-weight-bold text-uppercase">CREATIVE DESIGN</h2>
               <p class="lead">CorelDRAW Designer & System Logic Planner</p>
               <a href="#Keahlian" class="btn btn-info btn-sm px-4 font-weight-bold shadow-sm mt-2">LIHAT SKILL</a>
@@ -145,14 +55,14 @@
       </div>
     </header>
 
-    <section id="About" class="bg-white">
+    <section id="About" class="bg-white" style="padding: 70px 0;">
       <div class="container text-center">
         <h2 class="font-weight-bold">TENTANG SAYA</h2>
         <hr style="width: 60px; border-top: 3px solid #007bff;" class="mb-4">
         
         <div class="row justify-content-center mb-4">
             <div class="col-auto">
-                <img src="assets/Foto1.png" class="rounded-circle about-img shadow" alt="Foto Diva Heni Cintia">
+                <img src="assets/Foto1.png" class="rounded-circle shadow" alt="Foto Diva Heni Cintia" style="width: 150px; height: 150px; object-fit: cover; border: 5px solid white;">
             </div>
         </div>
 
@@ -164,26 +74,26 @@
       </div>
     </section>
 
-    <section id="Keahlian" class="bg-light">
+    <section id="Keahlian" class="bg-light" style="padding: 70px 0;">
       <div class="container text-center">
         <h2 class="font-weight-bold mb-5">KEAHLIAN UTAMA</h2>
         <div class="row">
           <div class="col-md-4 mb-4">
-            <div class="skill-card">
+            <div style="border: none; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
               <i class="fas fa-code fa-3x text-primary mb-3"></i>
               <h5 class="font-weight-bold">Web Development</h5>
               <p class="small text-muted mb-0">HTML, CSS, & Bootstrap.</p>
             </div>
           </div>
           <div class="col-md-4 mb-4">
-            <div class="skill-card">
+            <div style="border: none; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
               <i class="fas fa-palette fa-3x text-primary mb-3"></i>
               <h5 class="font-weight-bold">CorelDRAW</h5>
               <p class="small text-muted mb-0">Vektor, Logo, & Ilustrasi Grafis.</p>
             </div>
           </div>
           <div class="col-md-4 mb-4">
-            <div class="skill-card">
+            <div style="border: none; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
               <i class="fas fa-sitemap fa-3x text-primary mb-3"></i>
               <h5 class="font-weight-bold">System Logic</h5>
               <p class="small text-muted mb-0">Flowchart & Alur Logika Program.</p>
@@ -193,14 +103,15 @@
       </div>
     </section>
 
-    <section id="Location" class="bg-white">
+    <section id="Location" class="bg-white" style="padding: 70px 0;">
       <div class="container text-center">
         <h2 class="font-weight-bold mb-5 text-uppercase">Lokasi</h2>
         <div class="row justify-content-center">
           <div class="col-lg-10">
-            <div class="map-container">
+            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3961.0232464166826!2d109.74157437499622!3d-6.900374993098862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNsKwNTQnMDEuNCJTIDEwOcKwNDQnMzguNyJF!5e0!3m2!1sid!2sid!4v1715000000000!5m2!1sid!2sid" 
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15842.158509890618!2d110.42!3d-6.96!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sid!2sid!4v1700000000000" 
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
                 allowfullscreen="" 
                 loading="lazy">
               </iframe>
@@ -211,18 +122,18 @@
       </div>
     </section>
 
-    <section id="Contact" class="bg-light text-center">
+    <section id="Contact" class="bg-light text-center" style="padding: 70px 0;">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-5 p-4 shadow rounded-lg border bg-white">
             <h4 class="font-weight-bold mb-4">HUBUNGI SAYA</h4>
-            <a href="https://wa.me/6283833947860" target="_blank" class="btn btn-success btn-block py-2 font-weight-bold mb-3 shadow-sm">
+            <a href="https://wa.me/6283833947860" target="_blank" class="btn btn-success btn-block py-2 font-weight-bold mb-3 shadow-sm" style="background-color: #25d366; border: none;">
               <i class="fab fa-whatsapp mr-2"></i> WHATSAPP
             </a>
-            <a href="https://www.instagram.com/dvctya_/" target="_blank" class="btn btn-instagram btn-block py-2 font-weight-bold mb-3 shadow-sm">
+            <a href="https://www.instagram.com/dvctya_/" target="_blank" class="btn btn-block py-2 font-weight-bold mb-3 shadow-sm" style="background: linear-gradient(45deg, #f09433, #dc2743, #bc1888); color: white !important; border: none;">
               <i class="fab fa-instagram mr-2"></i> INSTAGRAM
             </a>
-            <a href="mailto:divacintia1@gmail.com" class="btn btn-gmail btn-block py-2 font-weight-bold shadow-sm">
+            <a href="mailto:divacintia1@gmail.com" class="btn btn-block py-2 font-weight-bold shadow-sm" style="background-color: #db4437; color: white !important; border: none;">
               <i class="fas fa-envelope mr-2"></i> GMAIL
             </a>
           </div>
